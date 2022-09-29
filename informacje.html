@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!--
+
+        Copyright © 2022 SpaceRaceOdyssey
+        Autor: Tomasz Tarnawski
+        Powielanie oraz rozpowszechnianie bez pisemnej zgody autora jest zakazane
+    
+        -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/photos/logo.png" />
+        <link rel="stylesheet" href="./informacje.css" />
+        <title>Space Race Odyssey</title>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="logo"
+                ><img src="./photos/logo.png" alt="" class="logozd"
+            /></a>
+            <ul class="przyciskiul">
+                <li class="przyciskili">
+                    <a href="informacje.html"
+                        ><b><u>Informacje</u></b></a
+                    >
+                </li>
+                <li class="przyciskili">
+                    <a href="index.html">Strona Główna</a>
+                </li>
+                <li class="przyciskili">
+                    <a href="tabela_wynikow.html">Tabela Wyników</a>
+                </li>
+            </ul>
+            <button class="button" role="button">
+                <span class="text"><a href="gra.html">Zagraj Teraz</a></span>
+            </button>
+        </nav>
+        <div class="napis">
+            <p class="top">Jak Grać?</p>
+            <p class="normal">
+                <br />
+                <br />
+                <br />
+                <br />
+                <b><font size="15px">Cel Gry</font></b
+                ><br />
+                Celem gry jest dolecenie jak najdalej i jednoczesne unikanie
+                kamieni i asteroid, jak i zbieranie dopalaczy i satelit.
+                <br />
+                <br />
+                <b><font size="15px">Sterowanie</font></b
+                ><br />
+                Statkiem steruje się za pomocą lewej i prawej strzałki, a
+                strzalka w górę pozwa odpalić dopalacz.
+                <br />
+                <br />
+                <b><font size="15px">Dopalacze</font></b
+                ><br />
+                Dopalacz pozwala zwiększyć prędkość o 25km/s jedno cześnie
+                dodając 0.025 do naszego mnożnika.
+                <br />
+                <br />
+                <b><font size="15px">Satelity</font></b
+                ><br />
+                Satelity pojawiają co jakiś czas na mapie. <br />Zbieranie ich
+                jest bardzo ważne ponieważ każdy satelita dodaje aż 0.1 do
+                naszego mnożnika.
+                <br />
+                <br />
+                <b><font size="15px">Wynik końcowy</font></b
+                ><br />
+                Wynik końcowy jest obliczany na podstawie odległości mnożonej
+                przez mnożnik, który na początku gry wynosi 1.
+            </p>
+        </div>
+        <div class="footer-basic">
+            <footer>
+                <ul>
+                    <li><a href="informacje.html">Informacje</a></li>
+                    <li><a href="tabela_wynikow.html">Tabela Wyników</a></li>
+                </ul>
+                <p class="copyright">SpaceRaceOdyssey © 2022</p>
+            </footer>
+        </div>
+        <script>
+            let nav = document.querySelector("nav");
+
+            const KOLOR_NAGORZE = "";
+            const KOLOR_NADOLE = "#111111";
+            const WYSOKOSC = 50;
+
+            const changing = () => {
+                if (window.scrollY > WYSOKOSC) {
+                    nav.style.backgroundColor = KOLOR_NADOLE;
+                } else {
+                    nav.style.backgroundColor = KOLOR_NAGORZE;
+                }
+            };
+
+            changing();
+
+            window.addEventListener("scroll", changing);
+        </script>
+    </body>
+</html>

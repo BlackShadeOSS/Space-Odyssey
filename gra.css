@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "Nasalization";
+    src: url("./nasalization-rg.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+    height: 125vh;
+    width: 100%;
+    margin: 0;
+    font-family: "Nasalization";
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000000;
+    height: 8vh;
+    font-size: 4vh;
+}
+
+.milisekundy {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 1.75vh;
+    width: 30px;
+}
+
+.napis {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 90px;
+    text-decoration: none;
+    text-align: center;
+    height: 92vh;
+    width: 100%;
+    z-index: 10000;
+}
+
+#board {
+    position: relative;
+    width: 1300px;
+    height: 750px;
+    margin: 40px auto;
+    border: 2px solid white;
+    background-color: black;
+    overflow: hidden;
+    background: url("./photos/tlogry.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#jet {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: url("./photos/rocket.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    left: 49%;
+    bottom: 25px;
+}
+
+.rocks {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 50px;
+    background: url("./photos/meteor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+.fuel {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 45px; 
+    background: url("./photos/booster.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dopalacz {
+    position: absolute;
+    left: 15px;
+    top: 765px;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.dopalacz > p {
+    margin: 0px 0px 15px 0px;
+}
+
+.hydrogen {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    background: url("./photos/hydrogen.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+.asteroids {
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    height: 90px;
+    background: url("./photos/asteroid.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+
+.odleglosc {
+    position: absolute;
+    right: 5px;
+    top: 770px;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.odleglosc > p {
+    margin: 0px 0px 15px 0px;
+}
+
+.predkosc {
+    position: absolute;
+    right: 15px;
+    top: 620px;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.predkosc > p {
+    margin: 0px 0px 15px 0px;
+}
+
+.satelites {
+    position: absolute;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    background: url("./photos/satellite.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+.zebranesate {
+    position: absolute;
+    left: 15px;
+    top: 620px;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.zebranesate > p {
+    margin: 0px 0px 15px 0px;
+}
+
+.logo {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 0px;
+}
+
+.logozd {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}

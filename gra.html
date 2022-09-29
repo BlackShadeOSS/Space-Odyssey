@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!--
+
+        Copyright © 2022 SpaceRaceOdyssey
+        Autor: Tomasz Tarnawski
+        Powielanie oraz rozpowszechnianie bez pisemnej zgody autora jest zakazane
+    
+        -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/photos/logo.png" />
+        <link rel="stylesheet" href="./gra.css" />
+        <title>Space Race Odyssey</title>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="logo"
+                ><img src="./photos/logo.png" alt="" class="logozd"
+            /></a>
+            <p id="stopwatch">T+00:00:00</p>
+            <p class="milisekundy" id="milisekundy">00</p>
+        </nav>
+        <div class="napis" id="napis">
+            <p>
+                Aby rozpocząć grę naciśnij <br />
+                dowolny przycisk
+            </p>
+        </div>
+        <div id="board">
+            <div class="rocks"></div>
+            <div id="jet"></div>
+            <div class="hydrogen"></div>
+            <div class="asteroids"></div>
+            <div class="satelites"></div>
+        </div>
+
+        <div class="zebranesate" id="zebranesate">
+            <p>
+                Zebrane <br />
+                Satelity: <br />0
+            </p>
+        </div>
+
+        <div class="dopalacz" id="dopalacz">
+            <p>Dopalacz</p>
+            <div class="fuel" id="fuel"></div>
+        </div>
+
+        <div class="predkosc" id="predkosc">
+            <p>Prędkość: <br />0 Km/s</p>
+        </div>
+
+        <div class="odleglosc" id="odleglosc">
+            <p>Odległość: <br />0 Km</p>
+        </div>
+        <script src="gra.js"></script>
+    </body>
+</html>
