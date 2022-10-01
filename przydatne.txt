@@ -1,6 +1,0 @@
-https://www.tutsmake.com/convert-array-to-json-object-javascript/
-https://github.com/douglascrockford/JSON-js
-https://stackoverflow.com/questions/459105/convert-a-multidimensional-javascript-array-to-json
-https://stackoverflow.com/questions/13603265/convert-json-data-to-javascript-array-in-multi-dimensional-sense
-https://stackoverflow.com/questions/14528385/how-to-convert-json-object-to-javascript-array
-https://www.w3schools.com/js/js_cookies.asp
