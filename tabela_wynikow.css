@@ -211,3 +211,18 @@ td {
     border: #ffffff 2px solid;
     padding: 5px;
 }
+
+.napis {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 70px;
+    text-decoration: none;
+    text-align: center;
+    height: 92vh;
+    width: 100%;
+    z-index: 10000;
+    visibility: hidden;
+}

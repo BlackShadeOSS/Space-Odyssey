@@ -7,6 +7,7 @@ window.onload = function () {
     downloadcookie();
     scoreCookie.sort(compareSecondColumn);
     createTable(scoreCookie);
+    hidetableifempty();
 };
 
 function downloadcookie() {
@@ -20,7 +21,12 @@ function checkCookie(name) {
     if (cookie == "") {
         ifcookieexists = false;
     } else {
-        ifcookieexists = true;
+        if (cookie == "[]") {
+            ifcookieisempty = true;
+        } else {
+            ifcookieisempty = false;
+            ifcookieexists = true;
+        }
     }
 }
 
@@ -42,6 +48,13 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+function hidetableifempty() {
+    if (ifcookieisempty == true || ifcookieexists == false) {
+        document.getElementById("tabelka").style.visibility = "hidden";
+        document.getElementById("napis").style.visibility = "visible";
+    }
 }
 
 function createTable(tableData) {
