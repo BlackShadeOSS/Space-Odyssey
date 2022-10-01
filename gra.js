@@ -22,6 +22,8 @@ var zebranesatelity = 0;
 var wszystkiedopalacze = 0;
 var wynikkoncowy = 0;
 var mnoznik = 1;
+var ifcookieexists = false;
+var scoreCookie = [];
 
 let timeout;
 let timeoutmoverock;
@@ -36,6 +38,46 @@ let timeoutupdateprendosc;
 let timeoutmovesatelites;
 let timeoutgeneratesatelites;
 let timeoutupdatezebranesate;
+
+window.onload = function () {
+    checkCookie("score");
+    downloadcookie();
+};
+
+function downloadcookie() {
+    if (ifcookieexists == true) {
+        scoreCookie = Object.values(JSON.parse(getCookie("score")));
+    }
+}
+
+function checkCookie(name) {
+    let cookie = getCookie(name);
+    if (cookie == "") {
+        ifcookieexists = false;
+    } else {
+        ifcookieexists = true;
+    }
+}
+
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";" + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 function startGry() {
     if (stoptime == true && koniec == false) {
@@ -65,6 +107,9 @@ function koniecGry() {
             Math.round(podliczwynik()) +
             "<br><br>Aby zrestartować naciśnij <br>R";
         board.style.filter = "blur(5px)";
+        nick = prompt("Podaj nazwę gracza:");
+        scoreCookie.push([nick, Math.round(podliczwynik())]);
+        setCookie("score", JSON.stringify(scoreCookie));
         koniec = true;
     }
 }
