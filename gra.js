@@ -101,10 +101,11 @@ function startGry() {
 function koniecGry() {
     if (stoptime == false) {
         stoptime = true;
+        let wynik = Math.round(podliczwynik());
         napis.style.visibility = "visible";
         napis.innerHTML =
             "Rozbiłeś się <br> Twój wynik to <br>" +
-            Math.round(podliczwynik()) +
+            wynik +
             "<br><br>Aby zrestartować naciśnij <br>R";
         board.style.filter = "blur(5px)";
         let nick;
@@ -117,7 +118,7 @@ function koniecGry() {
             }
             alert("Nie podano nazwy gracza!");
         }
-        scoreCookie.push([nick, Math.round(podliczwynik())]);
+        scoreCookie.push([nick, wynik]);
         setCookie("score", JSON.stringify(scoreCookie));
         koniec = true;
     }
