@@ -107,7 +107,16 @@ function koniecGry() {
             Math.round(podliczwynik()) +
             "<br><br>Aby zrestartować naciśnij <br>R";
         board.style.filter = "blur(5px)";
-        nick = prompt("Podaj nazwę gracza:");
+        let nick;
+        while (true) {
+            nick = prompt("Podaj nazwę gracza:");
+            if (nick) {
+                if (nick.trim().length > 0) {
+                    break;
+                }
+            }
+            alert("Nie podano nazwy gracza!");
+        }
         scoreCookie.push([nick, Math.round(podliczwynik())]);
         setCookie("score", JSON.stringify(scoreCookie));
         koniec = true;
